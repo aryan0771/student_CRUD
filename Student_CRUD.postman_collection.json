@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "39802eec-8aba-42a0-85ce-c8f00953132a",
+		"name": "Student_CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22300280"
+	},
+	"item": [
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Jhon Doe 123",
+							"type": "text"
+						},
+						{
+							"key": "standard",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jhon@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/ARYAN CHAVDA/Downloads/aryan_chavda(1).jfif"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/student/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student",
+						"create"
+					]
+				},
+				"description": "Name - Required\r\nEmail - Required\r\nStandard - Required\r\nImage - Required"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/student/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"OFFSET\":\"1\",\r\n    \"LIMIT\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/student/view",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student",
+						"view"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Jhon 123",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "jhon123@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "standard",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/ARYAN CHAVDA/Downloads/aryan_chavda(1).jfif"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/student/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
